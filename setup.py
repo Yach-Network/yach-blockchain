@@ -2,9 +2,9 @@ from setuptools import setup
 
 dependencies = [
     "blspy==1.0.2",  # Signature library
-    "chiavdf==1.0.1",  # timelord and vdf verification
-    "chiabip158==1.0",  # bip158-style wallet filters
-    "chiapos==1.0.2",  # proof of space
+    "yachvdf==1.0.1",  # timelord and vdf verification
+    "yachbip158==1.0",  # bip158-style wallet filters
+    "yachpos==1.0.2",  # proof of space
     "clvm==0.9.6",
     "clvm_rs==0.1.7",
     "clvm_tools==0.4.3",
@@ -19,7 +19,7 @@ dependencies = [
     #  "keyrings.cryptfile==1.3.8",  # Secure storage for keys on Linux (Will be replaced)
     #  See https://github.com/frispete/keyrings.cryptfile/issues/15
     "PyYAML==5.4.1",  # Used for config file format
-    "setproctitle==1.2.2",  # Gives the chia processes readable names
+    "setproctitle==1.2.2",  # Gives the yach processes readable names
     "sortedcontainers==2.3.0",  # For maintaining sorted mempools
     "websockets==8.1.0",  # For use in wallet RPC and electron UI
     "click==7.1.2",  # For the CLI
@@ -41,14 +41,14 @@ dev_dependencies = [
 ]
 
 kwargs = dict(
-    name="chia-blockchain",
+    name="yach-blockchain",
     author="Mariano Sorgente",
-    author_email="mariano@chia.net",
-    description="Chia blockchain full node, farmer, timelord, and wallet.",
-    url="https://chia.net/",
+    author_email="mariano@yach.net",
+    description="Yach blockchain full node, farmer, timelord, and wallet.",
+    url="https://yach.net/",
     license="Apache License",
     python_requires=">=3.7, <4",
-    keywords="chia blockchain node",
+    keywords="yach blockchain node",
     install_requires=dependencies,
     setup_requires=["setuptools_scm"],
     extras_require=dict(
@@ -58,52 +58,52 @@ kwargs = dict(
     ),
     packages=[
         "build_scripts",
-        "chia",
-        "chia.cmds",
-        "chia.consensus",
-        "chia.daemon",
-        "chia.full_node",
-        "chia.timelord",
-        "chia.farmer",
-        "chia.harvester",
-        "chia.introducer",
-        "chia.plotting",
-        "chia.protocols",
-        "chia.rpc",
-        "chia.server",
-        "chia.simulator",
-        "chia.types.blockchain_format",
-        "chia.types",
-        "chia.util",
-        "chia.wallet",
-        "chia.wallet.puzzles",
-        "chia.wallet.rl_wallet",
-        "chia.wallet.cc_wallet",
-        "chia.wallet.did_wallet",
-        "chia.wallet.settings",
-        "chia.wallet.trading",
-        "chia.wallet.util",
-        "chia.ssl",
+        "yach",
+        "yach.cmds",
+        "yach.consensus",
+        "yach.daemon",
+        "yach.full_node",
+        "yach.timelord",
+        "yach.farmer",
+        "yach.harvester",
+        "yach.introducer",
+        "yach.plotting",
+        "yach.protocols",
+        "yach.rpc",
+        "yach.server",
+        "yach.simulator",
+        "yach.types.blockchain_format",
+        "yach.types",
+        "yach.util",
+        "yach.wallet",
+        "yach.wallet.puzzles",
+        "yach.wallet.rl_wallet",
+        "yach.wallet.cc_wallet",
+        "yach.wallet.did_wallet",
+        "yach.wallet.settings",
+        "yach.wallet.trading",
+        "yach.wallet.util",
+        "yach.ssl",
         "mozilla-ca",
     ],
     entry_points={
         "console_scripts": [
-            "chia = chia.cmds.chia:main",
-            "chia_wallet = chia.server.start_wallet:main",
-            "chia_full_node = chia.server.start_full_node:main",
-            "chia_harvester = chia.server.start_harvester:main",
-            "chia_farmer = chia.server.start_farmer:main",
-            "chia_introducer = chia.server.start_introducer:main",
-            "chia_timelord = chia.server.start_timelord:main",
-            "chia_timelord_launcher = chia.timelord.timelord_launcher:main",
-            "chia_full_node_simulator = chia.simulator.start_simulator:main",
+            "yach = yach.cmds.yach:main",
+            "yach_wallet = yach.server.start_wallet:main",
+            "yach_full_node = yach.server.start_full_node:main",
+            "yach_harvester = yach.server.start_harvester:main",
+            "yach_farmer = yach.server.start_farmer:main",
+            "yach_introducer = yach.server.start_introducer:main",
+            "yach_timelord = yach.server.start_timelord:main",
+            "yach_timelord_launcher = yach.timelord.timelord_launcher:main",
+            "yach_full_node_simulator = yach.simulator.start_simulator:main",
         ]
     },
     package_data={
-        "chia": ["pyinstaller.spec"],
-        "chia.wallet.puzzles": ["*.clvm", "*.clvm.hex"],
-        "chia.util": ["initial-*.yaml", "english.txt"],
-        "chia.ssl": ["chia_ca.crt", "chia_ca.key", "dst_root_ca.pem"],
+        "yach": ["pyinstaller.spec"],
+        "yach.wallet.puzzles": ["*.clvm", "*.clvm.hex"],
+        "yach.util": ["initial-*.yaml", "english.txt"],
+        "yach.ssl": ["yach_ca.crt", "yach_ca.key", "dst_root_ca.pem"],
         "mozilla-ca": ["cacert.pem"],
     },
     use_scm_version={"fallback_version": "unknown-no-.git-directory"},

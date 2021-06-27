@@ -6,10 +6,10 @@ from pathlib import Path
 import aiosqlite
 import pytest
 
-from chia.consensus.blockchain import Blockchain
-from chia.full_node.block_store import BlockStore
-from chia.full_node.coin_store import CoinStore
-from chia.util.db_wrapper import DBWrapper
+from yach.consensus.blockchain import Blockchain
+from yach.full_node.block_store import BlockStore
+from yach.full_node.coin_store import CoinStore
+from yach.util.db_wrapper import DBWrapper
 from tests.setup_nodes import bt, test_constants
 
 
