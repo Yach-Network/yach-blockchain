@@ -71,19 +71,19 @@ network_overrides: &network_overrides
       DIFFICULTY_STARTING: 30
   config:
     mainnet:
-      address_prefix: "xch"
+      address_prefix: "yach"
     testnet0:
-      address_prefix: "txch"
+      address_prefix: "tyach"
     testnet1:
-      address_prefix: "txch"
+      address_prefix: "tyach"
     testnet2:
-      address_prefix: "txch"
+      address_prefix: "tyach"
     testnet3:
-      address_prefix: "txch"
+      address_prefix: "tyach"
     testnet4:
-      address_prefix: "txch"
+      address_prefix: "tyach"
     testnet7:
-      address_prefix: "txch"
+      address_prefix: "tyach"
 
 selected_network: &selected_network "mainnet"
 ALERTS_URL: https://download.yach.net/notify/mainnet_alert.txt
@@ -146,7 +146,7 @@ harvester:
 
 pool:
   # Replace this with a real puzzle hash
-  # xch_target_address: txch102gkhhzs60grx7cfnpng5n6rjecr89r86l5s8xux2za8k820cxsq64ssdg
+  # yach_target_address: tyach102gkhhzs60grx7cfnpng5n6rjecr89r86l5s8xux2za8k820cxsq64ssdg
   logging: *logging
   network_overrides: *network_overrides
   selected_network: *selected_network
@@ -166,7 +166,7 @@ farmer:
   pool_public_keys: []
 
   # Replace this with a real puzzle hash
-  # xch_target_address: txch102gkhhzs60grx7cfnpng5n6rjecr89r86l5s8xux2za8k820cxsq64ssdg
+  # yach_target_address: tyach102gkhhzs60grx7cfnpng5n6rjecr89r86l5s8xux2za8k820cxsq64ssdg
 
   # If True, starts an RPC server at the following port
   start_rpc_server: True
