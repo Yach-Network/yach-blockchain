@@ -60,7 +60,7 @@ if [ "$(uname)" = "Linux" ]; then
 	elif type pacman && [ -f "/etc/arch-release" ]; then
 		# Arch Linux
 		echo "Installing on Arch Linux."
-		sudo pacman -S --needed python git
+		#sudo pacman -S --needed python git
 	elif type yum && [ ! -f "/etc/redhat-release" ] && [ ! -f "/etc/centos-release" ] && [ ! -f "/etc/fedora-release" ]; then
 		# AMZN 2
 		echo "Installing on Amazon Linux 2."
@@ -116,7 +116,7 @@ python -m pip install --upgrade pip
 python -m pip install wheel
 #if [ "$INSTALL_PYTHON_VERSION" = "3.8" ]; then
 # This remains in case there is a diversion of binary wheels
-python -m pip install --extra-index-url https://pypi.yach.net/simple/ miniupnpc==2.1
+#python -m pip install --extra-index-url https://pypi.yach.net/simple/ miniupnpc==2.1
 python -m pip install -e . --extra-index-url https://pypi.yach.net/simple/
 
 echo ""
