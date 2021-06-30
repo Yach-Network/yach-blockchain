@@ -32,10 +32,10 @@ testnet_kwargs = {
     # Forks of yach should change this value to provide replay attack protection. This is set to mainnet genesis chall
     "AGG_SIG_ME_ADDITIONAL_DATA": bytes.fromhex("425f54ecc6a7a16593dd19cf35736942124692f91385e45002318fa6df593913"),
     "GENESIS_PRE_FARM_POOL_PUZZLE_HASH": bytes.fromhex(
-        "0x5eccac801d04b02c96eac1c5dceffed236514759f3cc9bf05778c4fdc4a5e9e9"
+        "5eccac801d04b02c96eac1c5dceffed236514759f3cc9bf05778c4fdc4a5e9e9"
     ),
     "GENESIS_PRE_FARM_FARMER_PUZZLE_HASH": bytes.fromhex(
-        "0x5eccac801d04b02c96eac1c5dceffed236514759f3cc9bf05778c4fdc4a5e9e9"
+        "5eccac801d04b02c96eac1c5dceffed236514759f3cc9bf05778c4fdc4a5e9e9"
     ),
     "MAX_VDF_WITNESS_SIZE": 64,
     # Size of mempool = 50x the size of block
