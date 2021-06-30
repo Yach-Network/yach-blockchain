@@ -1,6 +1,6 @@
 from typing import Tuple
 
-from yachvdf import prove
+from chiavdf import prove
 
 from yach.consensus.constants import ConsensusConstants
 from yach.types.blockchain_format.classgroup import ClassgroupElement

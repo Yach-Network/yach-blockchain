@@ -9,7 +9,7 @@ from typing import Dict, List, Optional, Set, Tuple, Union
 from concurrent.futures.thread import ThreadPoolExecutor
 
 from blspy import G1Element, PrivateKey
-from yachpos import DiskProver
+from chiapos import DiskProver
 
 from yach.consensus.pos_quality import UI_ACTUAL_SPACE_CONSTANT_FACTOR, _expected_plot_size
 from yach.types.blockchain_format.proof_of_space import ProofOfSpace

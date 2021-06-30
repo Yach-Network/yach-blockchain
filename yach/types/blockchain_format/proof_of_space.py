@@ -4,7 +4,7 @@ from typing import Optional
 
 from bitstring import BitArray
 from blspy import G1Element
-from yachpos import Verifier
+from chiapos import Verifier
 
 from yach.consensus.constants import ConsensusConstants
 from yach.types.blockchain_format.sized_bytes import bytes32
