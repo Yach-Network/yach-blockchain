@@ -6,7 +6,7 @@ import time
 from concurrent.futures.process import ProcessPoolExecutor
 from typing import Dict, List, Optional, Set, Tuple
 from blspy import AugSchemeMPL, G1Element
-from yachbip158 import PyBIP158
+from chiabip158 import PyBIP158
 
 from yach.consensus.block_record import BlockRecord
 from yach.consensus.constants import ConsensusConstants
@@ -388,7 +388,7 @@ class MempoolManager:
                 log.warning(f"{npc.puzzle_hash} != {coin_record.coin.puzzle_hash}")
                 return None, MempoolInclusionStatus.FAILED, Err.WRONG_PUZZLE_HASH
 
-            yachlisp_height = (
+            chialisp_height = (
                 self.peak.prev_transaction_block_height if not self.peak.is_transaction_block else self.peak.height
             )
             assert self.peak.timestamp is not None
@@ -397,7 +397,7 @@ class MempoolManager:
                 coin_announcements_in_spend,
                 puzzle_announcements_in_spend,
                 npc.condition_dict,
-                uint32(yachlisp_height),
+                uint32(chialisp_height),
                 self.peak.timestamp,
             )
 

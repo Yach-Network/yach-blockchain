@@ -7,7 +7,7 @@ from yach.types.blockchain_format.program import Program
 from yach.types.blockchain_format.sized_bytes import bytes32
 from yach.types.condition_opcodes import ConditionOpcode
 from yach.util.ints import uint64
-from yach.wallet.yachlisp import sexp
+from yach.wallet.chialisp import sexp
 from yach.wallet.puzzles.load_clvm import load_clvm
 
 RATE_LIMITED_MODE = 1

@@ -5,7 +5,7 @@ from secrets import token_bytes
 from typing import Callable, Dict, List, Optional, Tuple, Set
 
 from blspy import AugSchemeMPL, G2Element
-from yachbip158 import PyBIP158
+from chiabip158 import PyBIP158
 
 import yach.server.ws_connection as ws
 from yach.consensus.block_creation import create_unfinished_block
